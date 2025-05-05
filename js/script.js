@@ -33,13 +33,13 @@ function calculate() {
 
   if (document.getElementById("flavour-1").checked) {
     flavourChoice = "Chocolate"
-    flavourPrice = 0.7
+    flavourPrice = 0.70
   } else if (document.getElementById("flavour-2").checked) {
     flavourChoice = "Strawberry"
-    flavourPrice = 0.8
+    flavourPrice = 0.80
   } else if (document.getElementById("flavour-3").checked) {
     flavourChoice = "Vanilla"
-    flavourPrice = 0.5
+    flavourPrice = 0.50
   }
 
   // totals
