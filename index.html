@@ -1,9 +1,183 @@
 <!DOCTYPE html>
-<html>
+<!-- ICS2O-Assignment-04-HTML-MDL -->
+<html lang="en-ca">
   <head>
-    <title>Title</title>
+    <meta charset="utf-8" />
+    <meta name="description" content="Welcome to the Donut Shop!" />
+    <meta name="keywords" content="mths, icd2o" />
+    <meta name="author" content="Trisha Ray" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.pink-purple.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicon-16x16.png"
+    />
+    <title>Welcome to the Donut Shop!</title>
   </head>
+
   <body>
-    <p>Paragraph</p>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="./js/script.js"></script>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title">Welcome to the Donut Shop!</span>
+        </div>
+      </header>
+      <main class="mdl-layout__content">
+        <div class="right-image">
+          <img src="./images/donuts.jpg" alt="donuts" />
+        </div>
+        <div class="page-content">How many donuts of what flavour would you like to order?</div>
+        <br />
+        <form>
+          <br />
+          <!-- Numeric Radio Button Group -->
+          <p>Pick how many donuts you want!</p>
+
+          <label
+            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+            for="amount"
+          >
+            <input
+              type="radio"
+              id="amount"
+              class="mdl-radio__button"
+              name="quantity"
+              value="3"
+            />
+            <span class="mdl-radio__label">3 ($5)</span>
+          </label>
+          <br />
+
+          <label
+            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+            for="amounttwo"
+          >
+            <input
+              type="radio"
+              id="amounttwo"
+              class="mdl-radio__button"
+              name="quantity"
+              value="6"
+            />
+            <span class="mdl-radio__label">6 ($9)</span>
+          </label>
+          <br />
+
+          <label
+            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+            for="amountthree"
+          >
+            <input
+              type="radio"
+              id="amountthree"
+              class="mdl-radio__button"
+              name="quantity"
+              value="9"
+            />
+            <span class="mdl-radio__label">9 ($12)</span>
+          </label>
+          <br />
+
+          <label
+            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+            for="amountfour"
+          >
+            <input
+              type="radio"
+              id="amountfour"
+              class="mdl-radio__button"
+              name="quantity"
+              value="12"
+            />
+            <span class="mdl-radio__label">12 ($14)</span>
+          </label>
+          <br />
+          <br/>
+          <!-- Numeric Radio Button Group -->
+          <p>Pick what flavour you want!</p>
+
+          <label
+            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+            for="flavour-1"
+          >
+            <input
+              type="radio"
+              id="flavour-1"
+              class="mdl-radio__button"
+              name="type"
+              value="Chocolate"
+            />
+            <span class="mdl-radio__label">Chocolate</span>
+          </label>
+          <br />
+
+          <label
+            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+            for="flavour-2"
+          >
+            <input
+              type="radio"
+              id="flavour-2"
+              class="mdl-radio__button"
+              name="type"
+              value="Strawberry"
+            />
+            <span class="mdl-radio__label">Strawberry</span>
+          </label>
+          <br />
+
+          <label
+            class="mdl-radio mdl-js-radio mdl-js-ripple-effect"
+            for="flavour-3"
+          >
+            <input
+              type="radio"
+              id="flavour-3"
+              class="mdl-radio__button"
+              name="type"
+              value="Vanilla"
+            />
+            <span class="mdl-radio__label">Vanilla</span>
+          </label>
+          <br />
+
+          <!-- Accent-colored raised button with ripple -->
+          <button
+            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            onclick="calculate()"
+            type="button"
+          >
+            Show final price
+          </button>
+        </form>
+        <br />
+        <div class="page-content-answer">
+          <div id="results"></div>
+        </div>
+      </main>
+    </div>
   </body>
 </html>
