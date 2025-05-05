@@ -44,8 +44,8 @@ function calculate() {
 
   // totals
   const subtotal = donutPrice + flavourPrice
-  const tax = subtotal * TAX_RATE
-  const total = subtotal + tax
+  const tax = Math.round(subtotal * TAX_RATE * 100) / 100
+  const total = Math.round((subtotal + tax) * 100) / 100
 
   // output
   if (donutChoice != "" && flavourChoice != "") {
